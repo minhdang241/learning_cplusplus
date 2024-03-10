@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "learning_cpluscplus",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "learning_cpluscplus_c1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-learning_cpluscplus_c1-Debug-6e52491c369a4b98dfce.json",
+					"name" : "learning_cpluscplus_c1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "learning_cpluscplus_c2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-learning_cpluscplus_c2-Debug-f54b8232aaabd7fa373e.json",
+					"name" : "learning_cpluscplus_c2",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/minhdg241/CLionProjects/learning_cpluscplus/cmake-build-debug",
+		"source" : "/Users/minhdg241/CLionProjects/learning_cpluscplus"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
