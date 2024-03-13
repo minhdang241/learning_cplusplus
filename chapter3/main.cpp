@@ -1,6 +1,6 @@
 #include "../std_lib_failities.h"
 
-int main() {
+void drill() {
     cout << "Enter the name of the person you want to write to" << endl;
     string first_name;
     cin >> first_name;
@@ -32,4 +32,16 @@ int main() {
     }
     cout << "Yours sincerely," << endl;
     cout << "Minh Dang" << endl;
+}
+
+void e4() {
+    cout << "Enter three integer values" << endl;
+    int val1 = 0, val2 = 0, val3 = 0;
+    cin >> val1 >> val2 >> val3;
+    cout << val3 << " " << val2 << " " << val1 << endl;
+}
+
+int main() {
+//    drill();
+//    e4();
 }
