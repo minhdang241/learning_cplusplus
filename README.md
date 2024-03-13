@@ -1,0 +1,1 @@
+This repo contains my practice code for the book "Programming: Principles and Practice Using C++" by Bjarne Stroustrup.
