@@ -1,11 +1,21 @@
 # ninja log v5
 351	388	1710064050609039934	learning_cpluscplus	82ffd25bdba2fe14
-0	40	1710064138176607390	build.ninja	1f9a46de999be581
+0	241	1710064145115353255	CMakeFiles/learning_cpluscplus_c2.dir/chapter2/main.cpp.o	2a9365e357e877f8
+0	40	1710301617042896223	build.ninja	1f9a46de999be581
+2	514	1710064938557802795	CMakeFiles/learning_cpluscplus_c1.dir/chapter1/main.cpp.o	7eea91888bb45841
 1	350	1710064050568899585	CMakeFiles/learning_cpluscplus.dir/chapter1/main.cpp.o	aa62983b1f2583fc
 2	305	1710063429505520867	CMakeFiles/learning_cpluscplus.dir/chapter2/main.cpp.o	ddbe4e0c54b23572
-0	339	1710064141308687828	CMakeFiles/learning_cpluscplus_c1.dir/chapter1/main.cpp.o	7eea91888bb45841
-341	379	1710064141349295720	learning_cpluscplus_c1	3a17d014aeade95c
-0	241	1710064145115353255	CMakeFiles/learning_cpluscplus_c2.dir/chapter2/main.cpp.o	2a9365e357e877f8
-241	272	1710064145148125079	learning_cpluscplus_c2	4e3bf7baf77d6f8a
-2	514	1710064938557802795	CMakeFiles/learning_cpluscplus_c1.dir/chapter1/main.cpp.o	7eea91888bb45841
 514	567	1710064938613335573	learning_cpluscplus_c1	3a17d014aeade95c
+241	272	1710064145148125079	learning_cpluscplus_c2	4e3bf7baf77d6f8a
+0	364	1710301634130296694	CMakeFiles/learning_cpluscplus_c3.dir/chapter3/main.cpp.o	62a644eef95b6cfe
+364	400	1710301634168019979	learning_cpluscplus_c3	5a9ed178a6e21a23
+2	391	1710302360034351948	CMakeFiles/learning_cpluscplus_c3.dir/chapter3/main.cpp.o	62a644eef95b6cfe
+391	429	1710302360075261850	learning_cpluscplus_c3	5a9ed178a6e21a23
+2	342	1710302384411323447	CMakeFiles/learning_cpluscplus_c3.dir/chapter3/main.cpp.o	62a644eef95b6cfe
+342	374	1710302384445196710	learning_cpluscplus_c3	5a9ed178a6e21a23
+1	481	1710303880148247822	CMakeFiles/learning_cpluscplus_c3.dir/chapter3/main.cpp.o	62a644eef95b6cfe
+481	517	1710303880187648504	learning_cpluscplus_c3	5a9ed178a6e21a23
+1	349	1710303888446996045	CMakeFiles/learning_cpluscplus_c3.dir/chapter3/main.cpp.o	62a644eef95b6cfe
+349	381	1710303888480998143	learning_cpluscplus_c3	5a9ed178a6e21a23
+2	407	1710304123680010974	CMakeFiles/learning_cpluscplus_c3.dir/chapter3/main.cpp.o	62a644eef95b6cfe
+407	442	1710304123717536890	learning_cpluscplus_c3	5a9ed178a6e21a23
