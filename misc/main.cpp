@@ -1,17 +1,16 @@
 #include "../std_lib_facilities.h"
 #include "macros.h"
 
-int f(int& x) {
-    return x;
+template<typename T>
+void print(T value) {
+    cout << value << endl;
 }
 
 int main() {
-//    FATAL("critical error occurred!");
-//    ASSERT(1 == 2, "1 is not equal to 2!");
-    int v = 1;
-    int* p = &v;
-    int& r = v;
-    cout << f(r) << endl;
-    cout << p << endl;
-    cout << r << endl;
+    int i = 1;
+    int &a = i;
+    cout << a << " " << i << endl;
+    int sz(10.0);
+    cout << sz << endl;
+    return 0;
 }
