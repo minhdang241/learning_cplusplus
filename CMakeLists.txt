@@ -18,3 +18,4 @@ add_executable(learning_cpluscplus_misc misc/main.cpp std_lib_facilities.h
         misc/macros.h)
 add_executable(learning_cpluscplus_misc_auto_kw misc/auto_example.cpp std_lib_facilities.h
         misc/macros.h)
+add_executable(learning_cpluscplus_projects_1 projects/rock_paper_scissors/main.cpp std_lib_facilities.h)
