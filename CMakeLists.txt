@@ -12,6 +12,7 @@ add_executable(learning_cpluscplus_c4_2 chapter4/find_leap_year.cpp std_lib_faci
 add_executable(learning_cpluscplus_c4_3 chapter4/find_vowel.cpp std_lib_facilities.h)
 add_executable(learning_cpluscplus_c4_4 chapter4/print_day.cpp std_lib_facilities.h)
 add_executable(learning_cpluscplus_c4_5 chapter4/print_month.cpp std_lib_facilities.h)
+add_executable(learning_cpluscplus_c4_6 chapter4/convert_degree.cpp std_lib_facilities.h)
 add_executable(learning_cpluscplus_c5 chapter5/main.cpp std_lib_facilities.h)
 add_executable(learning_cpluscplus_c8 chapter8/main.cpp std_lib_facilities.h)
 add_executable(learning_cpluscplus_c10 chapter10/main.cpp std_lib_facilities.h)
