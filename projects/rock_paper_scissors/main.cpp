@@ -12,30 +12,30 @@ string generateComputerChoice() {
     return options[randomChoice];
 }
 
-string compareChoices(string choice1, string choice2) {
+int compareChoices(string choice1, string choice2) {
     if (choice1 == "Rock") {
         if (choice2 == "Paper") {
-            return "Paper covers Rock. Sorry, you lost.";
+            return -1;
         } else if (choice2 == "Scissors") {
-            return "Rock smashes Scissors. You win!";
+            return 1;
         } else {
-            return "It's a draw.";
+            return 0;
         }
     } else if (choice1 == "Paper") {
         if (choice2 == "Scissors") {
-            return "Scissors cutting Paper. Sorry, you lost.";
+            return -1;
         } else if (choice2 == "Rock") {
-            return "Rock smashes Scissors. You win!";
+            return 1;
         } else {
-            return "It's a draw.";
+            return 0;
         }
     } else {
         if (choice2 == "Rock") {
-            return "Rock smashes Scissors. Sorry, you lost.";
+            return -1;
         } else if (choice2 == "Paper") {
-            return "Scissors cutting Paper. You win!";
+            return 1;
         } else {
-            return "It's a draw.";
+            return 0;
         }
     }
 }
@@ -59,37 +59,70 @@ string toRightFormat(string input) {
 }
 
 int main() {
-    cout << "Welcome to Rock, Paper, Scissors!\n" << endl;
-    cout << "Choose your move: " << endl;
-    cout << "1 - Rock," << endl;
-    cout << "2 - Paper," << endl;
-    cout << "3 - Scissors" << endl;
-    string stringInput;
-    cin >> stringInput;
-    string input;
-    if (isDigit(stringInput)) {
-        int option = stoi(stringInput);
-        if (option == 1) {
-            input = "Rock";
-        } else if (option == 2) {
-            input = "Paper";
-        } else if (option == 3) {
-            input = "Scissors";
-        } else {
-            cout << "Invalid move. Please enter Rock, Paper, or Scissors." << endl;
-            return 0;
+    bool isPlayAgain;
+    do {
+        cout << "Welcome to Rock, Paper, Scissors!\n" << endl;
+        cout << "Please enter your name, number of repetitions, and your chosen steps\n";
+        cout << "1 - Rock," << endl;
+        cout << "2 - Paper," << endl;
+        cout << "3 - Scissors" << endl;
+        string stringInput, name;
+        vector<string> stringInputs;
+        int noRepetitions, userScore = 0, computerScore = 0;
+        cin >> name >> noRepetitions;
+        cout << "\n> " << name << " " << noRepetitions;
+        while (cin >> stringInput) {
+            cout << " " << stringInput;
+            stringInputs.push_back(stringInput);
+            if (stringInputs.size() == noRepetitions) {
+                break;
+            }
         }
-    } else {
-        input = stringInput;
-        set<string> validInputs{"Rock", "Paper", "Scissors"};
-        input = toRightFormat(input);
-        if (validInputs.find(input) == validInputs.end()) {
-            cout << "Invalid move. Please enter Rock, Paper, or Scissors." << endl;
-            return 0;
+        cout << "\n\nGame Start!\n";
+        for (int i = 1; i <= noRepetitions; i++) {
+            stringInput = stringInputs[i-1];
+            string input;
+            if (isDigit(stringInput)) {
+                int option = stoi(stringInput);
+                if (option == 1) {
+                    input = "Rock";
+                } else if (option == 2) {
+                    input = "Paper";
+                } else if (option == 3) {
+                    input = "Scissors";
+                } else {
+                    cout << "Invalid move. Please enter Rock, Paper, or Scissors." << endl;
+                    return 0;
+                }
+            } else {
+                input = stringInput;
+                set<string> validInputs{"Rock", "Paper", "Scissors"};
+                input = toRightFormat(input);
+                if (validInputs.find(input) == validInputs.end()) {
+                    cout << "Invalid move. Please enter Rock, Paper, or Scissors." << endl;
+                    return 0;
+                }
+            }
+            cout << "Round " << i << ": ";
+            string computerChoice = generateComputerChoice();
+            int result = compareChoices(input, computerChoice);
+            cout << "Computer chose " << computerChoice << ". " << name << " chose " << input << ". Winner: ";
+            if (result == -1) {
+                cout << "Computer.";
+                computerScore++;
+            } else if (result == 1) {
+                cout << name << ".";
+                userScore++;
+            } else {
+                cout << "Draw.";
+            }
+            cout << "\n";
         }
-    }
-    cout << "> " << input << endl;
-    string computerChoice = generateComputerChoice();
-    string result = compareChoices(input, computerChoice);
-    cout << "The computer chose " << computerChoice << ". " << result << endl;
+        cout << "\nGame Over!\n";
+        cout << "Total Score - " << name << ": " << userScore << ", Computer: " << computerScore << "\n";
+        cout << "Would you like to play again? (yes/no)\n";
+        string answer;
+        cin >> answer;
+        isPlayAgain = answer == "yes";
+    } while (isPlayAgain);
 }

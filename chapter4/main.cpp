@@ -1,11 +1,21 @@
 #include <iostream>
 
 int main() {
-    int gearA = 7;
-    int gearB = 4;
+    int value;
+    std::cout << "Enter a value: ";
+    std::cin >> value;
 
-    std::cout << "Time Traveler's Code: ";
-    std::cout << ++gearA << gearB++ << ++gearA << gearB++ << ++gearA << gearB;
+    if (value < 0) {
+        goto negative;
+    } else {
+        goto positive;
+    }
 
+    negative:
+    std::cout << "Negative value entered!" << std::endl;
+    return 0;
+
+    positive:
+    std::cout << "Positive value entered!" << std::endl;
     return 0;
 }
