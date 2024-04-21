@@ -19,17 +19,21 @@ class vector {
     int sz;
     double *elem;
 public:
-    vector(int s) : sz{s}, elem{new double[s]} {
+    int size() { return sz; }
+
+    explicit vector(int s) : sz{s}, elem{new double[s]} {
         std::cout << "init with s" << std::endl;
         for (int i = 0; i < s; ++i) elem[i] = 0;
     }
+
     vector(std::initializer_list<double> lst) : sz{static_cast<int>(lst.size())}, elem{new double[lst.size()]} {
         std::cout << "init with lst" << std::endl;
         std::copy(lst.begin(), lst.end(), elem);
     }
-    vector& operator=(const vector& a) {
+
+    vector &operator=(const vector &a) {
         auto p = new double[a.sz];
-        std::copy(a.elem, a.elem+a.sz, p);
+        std::copy(a.elem, a.elem + a.sz, p);
         delete[] elem;
         elem = p;
         sz = a.sz;
@@ -40,5 +44,6 @@ public:
 int main() {
     vector v1(4);
     vector v2{4};
-
+    std::cout << "v1.sz = " << v1.size() << std::endl;
+    std::cout << "v2.sz = " << v2.size() << std::endl;
 }
