@@ -18,6 +18,7 @@ add_executable(learning_cpluscplus_c8 chapter8/main.cpp std_lib_facilities.h)
 add_executable(learning_cpluscplus_c10 chapter10/main.cpp std_lib_facilities.h)
 add_executable(learning_cpluscplus_c9_1 chapter9/main_dateclass.cpp std_lib_facilities.h)
 add_executable(learning_cpluscplus_c9_2 chapter9/main_dogclass.cpp std_lib_facilities.h)
+add_executable(learning_cpluscplus_c17 chapter17/main.cpp std_lib_facilities.h)
 add_executable(learning_cpluscplus_c18 chapter18/main.cpp std_lib_facilities.h)
 add_executable(learning_cpluscplus_c20 chapter20/main.cpp std_lib_facilities.h)
 add_executable(learning_cpluscplus_misc misc/main.cpp std_lib_facilities.h
@@ -25,3 +26,4 @@ add_executable(learning_cpluscplus_misc misc/main.cpp std_lib_facilities.h
 add_executable(learning_cpluscplus_misc_auto_kw misc/auto_example.cpp std_lib_facilities.h
         misc/macros.h)
 add_executable(learning_cpluscplus_projects_1 projects/rock_paper_scissors/main.cpp std_lib_facilities.h)
+add_executable(learning_cpluscplus_projects_2 projects/zoo_keepers/main.cpp std_lib_facilities.h)
