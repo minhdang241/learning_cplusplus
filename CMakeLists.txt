@@ -21,6 +21,7 @@ add_executable(learning_cpluscplus_c9_2 chapter9/main_dogclass.cpp std_lib_facil
 add_executable(learning_cpluscplus_c17 chapter17/main.cpp std_lib_facilities.h)
 add_executable(learning_cpluscplus_c18 chapter18/main.cpp std_lib_facilities.h)
 add_executable(learning_cpluscplus_c20 chapter20/main.cpp std_lib_facilities.h)
+add_executable(learning_cpluscplus_c23 chapter23/main.cpp std_lib_facilities.h)
 add_executable(learning_cpluscplus_misc misc/main.cpp std_lib_facilities.h
         misc/macros.h)
 add_executable(learning_cpluscplus_misc_auto_kw misc/auto_example.cpp std_lib_facilities.h
