@@ -1,4 +1,4 @@
-#include "../../std_lib_facilities.h"
+#include "../std_lib_facilities.h"
 
 void drill() {
     cout << "Enter the name of the person you want to write to" << endl;
