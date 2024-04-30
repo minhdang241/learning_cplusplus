@@ -15,7 +15,6 @@ int main() {
 //    array[0] = 5;
 //    cout << array[0] << endl;
 //    delete[] array;
-
     cout << "How many names they wish to enter: ";
     std::size_t size;
     cin >> size;
@@ -31,5 +30,6 @@ int main() {
     for (int i = 0; i < size; i++) {
         cout << "Name #" << i+1 << ": " << names[i] << endl;
     }
+    delete[] names;
     return 0;
 }
