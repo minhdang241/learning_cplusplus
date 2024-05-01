@@ -4,39 +4,43 @@
 #include <iostream>
 #include <string_view>
 #include <string>
+
 using namespace std;
-enum AnimalType
-{
+enum AnimalType {
     cat,
     dog,
     chicken,
 };
 
-constexpr std::string_view animalName(AnimalType type)
-{
-    switch (type)
-    {
-        case cat: return "cat";
-        case dog: return "dog";
-        case chicken: return "chicken";
-        default:  return "";
+constexpr std::string_view animalName(AnimalType type) {
+    switch (type) {
+        case cat:
+            return "cat";
+        case dog:
+            return "dog";
+        case chicken:
+            return "chicken";
+        default:
+            return "";
     }
 }
 
-constexpr int numLegs(AnimalType type)
+constexpr int numLegs(AnimalType type) // constexpr function can be evaluated at either compiled-time or running-time.
 {
-    switch (type)
-    {
-        case cat: return 4;
-        case dog: return 4;
-        case chicken: return 2;
-        default:  return 0;
+    switch (type) {
+        case cat:
+            return 4;
+        case dog:
+            return 4;
+        case chicken:
+            return 2;
+        default:
+            return 0;
     }
 }
 
 
-int main()
-{
+int main() {
     string name;
     cin >> name;
     AnimalType animal;

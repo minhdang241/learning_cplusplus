@@ -1,1 +1,5 @@
-This repo contains my practice code for the book "Programming: Principles and Practice Using C++" by Bjarne Stroustrup.
+This repo contains my practice for grinding c++ :) 
+
+It's hard!!! I know !
+
+Yet, I don't give a fuck, motherfucker !!!
