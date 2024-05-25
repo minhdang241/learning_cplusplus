@@ -1,3 +1,9 @@
+# Chapter 4
+> lvalue refers to the box, and rvalue refers to the value in the box.
+
+# Chapter 8
+> Using non-cost reference if we want to change the object value.
+
 # Chapter 17
 
 - The hardware only supports a sequence of bytes.
@@ -8,7 +14,7 @@
     - The compiler set aside memory for code called `code storage`.
     - The compiler set aside memory for global variables called `static storage`.
     - The compiler set aside memory for function calls and local variables called `stack storage`.
-    - The left over memory is called `free store`.
+    - The leftover memory is called `free store`.
 
 Memory layout:
 <table>
@@ -27,6 +33,11 @@ double x = *p;
 double y = p[2];
 ```
 
+Cast:
+- `static_cast<T>(x)`: converts between types `void*` and `double*`.
+- `const_cast<T>(x)`: strips the `const`.
+- `reinterpret_cast<T>(x)`: casts between unrelated types, such as `int` and `double*`.
+ 
 When thinking of using a case, reconsider:
 1. Is there a way to write the code without the case?
 2. Is there a way to redesign that part of the program so that the cast is not needed?
@@ -38,5 +49,23 @@ When thinking of using a case, reconsider:
 
 > `this` is a pointer that points to the object for which the member function was called.
 
-# Chapter 18
+- Deconstructor is called in either case:
+  - When the object goes out of scope
+  - When the pointer to object is explicitly deleted
 
+# Chapter 18
+## Copy
+`{} == initializer_list<T>`   
+copy by default is member wise copy
+
+- Deep copy vs Shallow copy
+> vector and string do deep copy.
+- Type that provides shallow copy is said to have _pointer semantics_ or _reference semantics_.
+- Type that provides deep copy is said to have _value semantics_.
+
+## Moving
+with move constructors and move assignment operators, we do not have to deal with pointers or references.
+
+> If we can't define a good invariant for a class that its constructor can establish, we probably have a poorly designed class.
+- A class with destructor should have a copy constructor and copy assignment operator since the member wise copy is wrong.
+- A class with destructor should have a move constructor and move assignment operator.
