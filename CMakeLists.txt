@@ -36,3 +36,4 @@ add_executable(learning_cpluscplus_projects_2 projects/zoo_keepers/main.cpp prin
 
 add_subdirectory(learningcpp)
 add_subdirectory(principle_and_practice_cpp)
+add_subdirectory(concurrency_in_action_cpp)

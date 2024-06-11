@@ -80,4 +80,14 @@ void f(int n) {
 int main() {
 //    vector v = {1,2,3};
     vector v2 = 10;
+    std::vector<int> v{1};
+    auto first = v.begin();
+    auto last = v.rbegin();
+
+    int num = std::distance(first, last.base());
+
+    // Displaying num
+    std::cout << *first << "\n";
+    std::cout << *last << "\n";
+    std::cout << num << "\n";
 }
