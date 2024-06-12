@@ -66,6 +66,14 @@ copy by default is member wise copy
 ## Moving
 with move constructors and move assignment operators, we do not have to deal with pointers or references.
 
-> If we can't define a good invariant for a class that its constructor can establish, we probably have a poorly designed class.
-- A class with destructor should have a copy constructor and copy assignment operator since the member wise copy is wrong.
-- A class with destructor should have a move constructor and move assignment operator.
+## Essential operations
+There are 7 operations:
+* Default constructor: We need this one when we want to create an object without any arguments.
+* Constructors with one or more arguments
+* Copy constructor / Copy assignment: A class acquiring resources should have a copy constructor and copy assignment operator since the member wise copy is wrong.
+* Move constructor / Move assignment: A class acquiring resources should have a move constructor and move assignment operator since the copy can be expensive. 
+* Destructor: We need this one if the class acquires resources.
+> If we can't define a good invariant (default values) for a class that its constructor can establish, we probably have a poorly designed class.
+
+The single-argument constructor can be used to convert one type to another. 
+We should use the `explicit` key word to provide the construction semantics instead of implicit conversions.

@@ -20,7 +20,7 @@ public:
         std::copy(lst.begin(), lst.end(), elem);
     }
 
-    // copy constructor
+    // copy constructor, this will be called when we initialize a vector with another vector
     vector(const vector& a) : sz{a.sz}, elem{new double[a.sz]} {
         std::copy(a.elem, a.elem + sz, elem);
     }
@@ -52,6 +52,10 @@ public:
         a.sz = 0;
         a.elem = nullptr;
         return *this;
+    }
+
+    double& operator[](int n) {
+        return elem[n];
     }
 
     void set(int n, double v) {
