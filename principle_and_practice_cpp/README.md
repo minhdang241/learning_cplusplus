@@ -77,3 +77,11 @@ There are 7 operations:
 
 The single-argument constructor can be used to convert one type to another. 
 We should use the `explicit` key word to provide the construction semantics instead of implicit conversions.
+
+# Chapter 19
+## Templates
+> Template is a mechanism that allows us to use types as parameters to a class or function.
+
+The compiler generates a new class or function for each type used in the template.
+
+> Generic programming: writing code that works with a variety of types.
