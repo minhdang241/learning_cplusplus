@@ -9,4 +9,4 @@ But, I don't give a fuck, motherfucker !!!
 Principle And Practice C++
 
 - [x] Chapter 17: Drills + Exercises
-- [] Chapter 18:
+- [x] Chapter 18: Drills
