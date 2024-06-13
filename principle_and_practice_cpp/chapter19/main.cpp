@@ -100,7 +100,6 @@ public:
     };
 };
 
-
 int main() {
     std::vector<int> v{1};
     vector<int> v2 {1};
