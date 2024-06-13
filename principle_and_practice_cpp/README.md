@@ -85,3 +85,7 @@ We should use the `explicit` key word to provide the construction semantics inst
 The compiler generates a new class or function for each type used in the template.
 
 > Generic programming: writing code that works with a variety of types.
+
+## Resources & Exceptions 
+When a function cannot perform its task, it should throw an exception.
+When the thread of execution leaves a scope, the destructors for every fully constructed object and sub-object are invoked.
