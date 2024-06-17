@@ -5,6 +5,7 @@
 #include <list>
 #include <mutex>
 #include <algorithm>
+#include <thread>
 
 std::list<int> some_list;
 std::mutex some_mutex; // global mutex
@@ -17,6 +18,8 @@ bool list_contains(int value_to_find) {
     std::lock_guard<std::mutex> guard(some_mutex); // make access to some_list mutually exclusive
     return std::find(some_list.begin(), some_list.end(), value_to_find) != some_list.end();
 }
+
+
 int main() {
     return 0;
 }
