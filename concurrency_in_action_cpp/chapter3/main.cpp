@@ -18,6 +18,5 @@ bool list_contains(int value_to_find) {
     return std::find(some_list.begin(), some_list.end(), value_to_find) != some_list.end();
 }
 int main() {
-
     return 0;
 }
