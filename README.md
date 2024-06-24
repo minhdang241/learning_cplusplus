@@ -3,7 +3,9 @@ This repo contains my practice for grinding c++ :)
 
 It's hard!!! I know!!!
 
-But, I don't give a fuck, motherfucker !!!
+But I don't give a fuck, motherfucker !!!
+
+> Learning any major new and valuable skill takes time and is worth it.
 
 # PROGRESS
 Concurrency in Action C++
