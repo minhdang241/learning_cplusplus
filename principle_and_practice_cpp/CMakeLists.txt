@@ -3,6 +3,7 @@ project(principle_and_practice_cpp)
 
 set(CMAKE_CXX_STANDARD 14)
 
+add_executable(lesson9 chapter9/main_dateclass.cpp chapter9/Chrono.cpp chapter9/Chrono.h std_lib_facilities)
 add_executable(drill17_1 chapter17/drill_1.cpp)
 add_executable(drill17_2 chapter17/drill_2.cpp)
 add_executable(e3 chapter17/exercise3.cpp)
