@@ -19,9 +19,9 @@ Concurrency in Action C++
 Principle And Practice C++
 > If you haven't done the drills, you have not "done" the book.
 
-Blue: concepts & techniques
-Green: advice
-Red: warning
+- Blue: concepts & techniques
+- Green: advice
+- Red: warning
 
 - [x] Chapter 9: Drills
 - [x] Chapter 17: Drills + Exercises

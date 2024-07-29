@@ -1,0 +1,3 @@
+/Users/minhdg241/CLionProjects/learning_cpluscplus/misc/demo_cmake/demo_2/tmp/CMakeFiles/opengl.dir
+/Users/minhdg241/CLionProjects/learning_cpluscplus/misc/demo_cmake/demo_2/tmp/CMakeFiles/edit_cache.dir
+/Users/minhdg241/CLionProjects/learning_cpluscplus/misc/demo_cmake/demo_2/tmp/CMakeFiles/rebuild_cache.dir
