@@ -9,6 +9,6 @@ void print_foo();
 void print(int);
 void swap_v(int, int);
 void swap_r(int&, int&);
-void swap_cv(const int&, const int&);
+void swap_cv(int const&, int const&);
 
 #endif //LEARNING_CPLUSCPLUS_MY_H
