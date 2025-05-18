@@ -29,54 +29,54 @@ using namespace std;
 int ga[] = {1, 2, 4, 8, 16, 32, 64, 128, 256, 512};
 
 // drill 2
-void f(const int *a, int n);
+void f(const int* a, int n);
 
 // drill 3
-void f(const int *a, int n) {
-    // drill 3a
-    int la[10];
+void f(const int* a, int n) {
+	// drill 3a
+	int la[10];
 
-    // drill 3b
-    for (int i = 0; i < 10; i++) {
-        la[i] = ga[i];
-    }
+	// drill 3b
+	for (int i = 0; i < 10; i++) {
+		la[i] = ga[i];
+	}
 
-    // drill 3c
-    for (int i : la) {
-        cout << i << " ";
-    }
-    cout << endl;
+	// drill 3c
+	for (int i : la) {
+		cout << i << " ";
+	}
+	cout << endl;
 
-    // drill 3d
-    int* p = new int[n];
+	// drill 3d
+	int* p = new int[n];
 
-    // drill 3e
-    for (int i = 0; i < 10; i++) {
-        p[i] = a[i];
-    }
+	// drill 3e
+	for (int i = 0; i < 10; i++) {
+		p[i] = a[i];
+	}
 
-    // drill 3f
-    for (int i = 0; i < 10; i++) {
-        cout << p[i] << " ";
-    }
-    cout << endl;
+	// drill 3f
+	for (int i = 0; i < 10; i++) {
+		cout << p[i] << " ";
+	}
+	cout << endl;
 
-    // drill 3g
-    delete[] p;
+	// drill 3g
+	delete[] p;
 }
 
 int main() {
-    // drill 4a
-    f(ga, 10);
+	// drill 4a
+	f(ga, 10);
 
-    // drill 4b
-    int aa[10];
-    aa[0] = 1;
-    for (int i = 1; i < 10; i++) {
-        aa[i] = (i+1)*aa[i-1];
-    }
+	// drill 4b
+	int aa[10];
+	aa[0] = 1;
+	for (int i = 1; i < 10; i++) {
+		aa[i] = (i + 1) * aa[i - 1];
+	}
 
-    f(aa, 10);
+	f(aa, 10);
 
-    return 0;
+	return 0;
 }

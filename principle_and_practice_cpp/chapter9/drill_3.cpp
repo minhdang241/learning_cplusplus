@@ -12,60 +12,64 @@
 using namespace std;
 
 class Date {
-private:
-    int y, m, d;
-public:
-    Date(int y, int m, int d);
+ private:
+	int y, m, d;
 
-    void add_day(int n);
+ public:
+	Date(int y, int m, int d);
 
-    int month() const { return m; }
+	void add_day(int n);
 
-    int day() const { return d; }
+	int month() const {
+		return m;
+	}
 
-    int year() const { return y; }
+	int day() const {
+		return d;
+	}
+
+	int year() const {
+		return y;
+	}
 };
 
 Date::Date(int yy, int mm, int dd) {
-    int yearMin(1900), yearMax(3000);
-    if (yy > yearMax || yy < yearMin)
-        cout << "Invalid year.";
-    if (mm > 12 || mm < 1)
-        cout << "Invalid month.";
-    if (dd > 31 || dd < 1)
-        cout << "Invalid day." << endl;
-    else {
-        y = yy;
-        m = mm;
-        d = dd;
-    }
+	int yearMin(1900), yearMax(3000);
+	if (yy > yearMax || yy < yearMin)
+		cout << "Invalid year.";
+	if (mm > 12 || mm < 1)
+		cout << "Invalid month.";
+	if (dd > 31 || dd < 1)
+		cout << "Invalid day." << endl;
+	else {
+		y = yy;
+		m = mm;
+		d = dd;
+	}
 }
-
 
 void Date::add_day(int n) {
-    //increase dd by n days
-    if (d + n > 31) {
-        d = 1;
-        m++;
-    } else {
-        d += n;
-    }
+	// increase dd by n days
+	if (d + n > 31) {
+		d = 1;
+		m++;
+	}
+	else {
+		d += n;
+	}
 }
 
-
 ostream& operator<<(ostream& os, const Date& d) {
-    return os << "(" << d.year()
-              << "," << d.month()
-              << "," << d.day() << ")";
+	return os << "(" << d.year() << "," << d.month() << "," << d.day() << ")";
 }
 
 int main() {
-    auto today = Date(1978, 6, 25);
-    auto tomorrow = today;
-    tomorrow.add_day(1);
-    cout << today << endl;
-    cout << tomorrow << endl;
+	auto today = Date(1978, 6, 25);
+	auto tomorrow = today;
+	tomorrow.add_day(1);
+	cout << today << endl;
+	cout << tomorrow << endl;
 
-    auto invalid_date = Date(2024, 13, 32);
-    return 0;
+	auto invalid_date = Date(2024, 13, 32);
+	return 0;
 }

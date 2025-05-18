@@ -10,83 +10,87 @@
 #include <iostream>
 
 using namespace std;
-enum class Month {
-    jan = 1, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec
-};
+enum class Month { jan = 1, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec };
 
 class Date {
-private:
-    int y, d;
-    Month m;
-public:
-    Date(int y, Month m, int d);
+ private:
+	int y, d;
+	Month m;
 
-    void add_day(int n);
+ public:
+	Date(int y, Month m, int d);
 
-    void add_year(int n);
+	void add_day(int n);
 
-    void add_month(int n);
+	void add_year(int n);
 
-    Month month() const { return m; }
+	void add_month(int n);
 
-    int day() const { return d; }
+	Month month() const {
+		return m;
+	}
 
-    int year() const { return y; }
+	int day() const {
+		return d;
+	}
+
+	int year() const {
+		return y;
+	}
 };
 
 Date::Date(int yy, Month mm, int dd) {
-    int yearMin(1900), yearMax(3000);
-    if (yy > yearMax || yy < yearMin)
-        cout << "Invalid year.";
-    if (mm > Month::dec || mm < Month::jan)
-        cout << "Invalid month.";
-    if (dd > 31 || dd < 1)
-        cout << "Invalid day." << endl;
-    else {
-        y = yy;
-        m = mm;
-        d = dd;
-    }
+	int yearMin(1900), yearMax(3000);
+	if (yy > yearMax || yy < yearMin)
+		cout << "Invalid year.";
+	if (mm > Month::dec || mm < Month::jan)
+		cout << "Invalid month.";
+	if (dd > 31 || dd < 1)
+		cout << "Invalid day." << endl;
+	else {
+		y = yy;
+		m = mm;
+		d = dd;
+	}
 }
 
 void Date::add_year(int n) {
-    y += n;
-    y = max(y, 3000);
+	y += n;
+	y = max(y, 3000);
 }
 
 void Date::add_month(int n) {
-    //increase dd by n days
-    if (static_cast<int>(m) + n > 12) {
-        m = Month::jan;
-        add_year(1);
-    } else {
-        m = Month(static_cast<int>(m) + n);
-    }
+	// increase dd by n days
+	if (static_cast<int>(m) + n > 12) {
+		m = Month::jan;
+		add_year(1);
+	}
+	else {
+		m = Month(static_cast<int>(m) + n);
+	}
 }
 
 void Date::add_day(int n) {
-    //increase dd by n days
-    if (d + n > 31) {
-        d = 1;
-        add_month(1);
-    } else {
-        d += n;
-    }
+	// increase dd by n days
+	if (d + n > 31) {
+		d = 1;
+		add_month(1);
+	}
+	else {
+		d += n;
+	}
 }
 
-
 ostream& operator<<(ostream& os, const Date& d) {
-    return os << "(" << d.year()
-              << "," << static_cast<int>(d.month())
-              << "," << d.day() << ")";
+	return os << "(" << d.year() << "," << static_cast<int>(d.month()) << "," << d.day() << ")";
 }
 
 int main() {
-    auto today = Date(1978, Month::dec, 31);
-    auto tomorrow = today;
-    tomorrow.add_day(1);
-    cout << today << endl;
-    cout << tomorrow << endl;
-    auto invalid_date = Date(2024, Month(13), 32);
-    return 0;
+	auto today = Date(1978, Month::dec, 31);
+	auto tomorrow = today;
+	tomorrow.add_day(1);
+	cout << today << endl;
+	cout << tomorrow << endl;
+	auto invalid_date = Date(2024, Month(13), 32);
+	return 0;
 }

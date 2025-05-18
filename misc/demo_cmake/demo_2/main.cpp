@@ -5,8 +5,7 @@
 #include <GLUT/glut.h>
 #include <OpenGL/gl.h>
 
-
 int main() {
-    glutBitmap8By13;
-    return 1;
+	glutBitmap8By13;
+	return 1;
 }

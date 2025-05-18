@@ -6,13 +6,13 @@
 #include <string>
 #include <vector>
 
-auto print(std::vector<int> const &values) -> void {
-  for (auto const &v : values) {
-    std::cout << v << " ";
-  }
-  std::cout << std::endl;
+auto print(std::vector<int> const& values) -> void {
+	for (auto const& v : values) {
+		std::cout << v << " ";
+	}
+	std::cout << std::endl;
 }
 int main() {
-  auto values = std::vector<int>{1, 2, 3, 4};
-  print(values);
+	auto values = std::vector<int>{1, 2, 3, 4};
+	print(values);
 }

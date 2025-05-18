@@ -7,16 +7,15 @@
 using namespace std;
 
 int main() {
-    // exercise 7
-    char* p = new char[256];
-    cin.get(p, 256, '!');
-    cout << p << endl;
-    cin.clear();
-    cin.ignore(256, '\n');
+	// exercise 7
+	char* p = new char[256];
+	cin.get(p, 256, '!');
+	cout << p << endl;
+	cin.clear();
+	cin.ignore(256, '\n');
 
-    // exercise 8
-    string s;
-    getline(cin, s, '!');
-    cout << s << endl;
+	// exercise 8
+	string s;
+	getline(cin, s, '!');
+	cout << s << endl;
 }
-

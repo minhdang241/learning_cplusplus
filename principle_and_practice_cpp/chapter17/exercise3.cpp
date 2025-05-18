@@ -6,18 +6,16 @@
 using namespace std;
 
 void to_lower(char* s) {
-    for (int i = 0; s[i] != '\0'; i++) {
-        if (s[i] >= 'A' && s[i] <= 'Z') {
-            s[i] += 32;
-        }
-    }
+	for (int i = 0; s[i] != '\0'; i++) {
+		if (s[i] >= 'A' && s[i] <= 'Z') {
+			s[i] += 32;
+		}
+	}
 }
-
 
 int main() {
-    char message[] = "Hello, World!";
-    to_lower(message);
-    cout << message << endl;
-    return 0;
+	char message[] = "Hello, World!";
+	to_lower(message);
+	cout << message << endl;
+	return 0;
 }
-

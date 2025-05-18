@@ -17,8 +17,8 @@
         b. Define a vector<int> vv, and initialize it with the first ten factorial values
         (1, 2*1, 3*2*1, 4*3*2*1, etc.). c. Call f() with vv as its argument.
 */
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 // drill 1
@@ -29,30 +29,28 @@ void f(vector<int>&);
 
 // drill 3
 void f(vector<int>& v) {
-    // drill 3a
-    vector<int> lv(v.size());
-    // drill 3b
-    for (int i = 0; i < v.size(); i++) {
-        lv[i] = v[i];
-    }
-    // drill 3c
-    for (int i : lv) {
-        cout << i << " ";
-    }
-    cout << endl;
-    // drill 3d
-    vector<int> lv2 = v;
-    // drill 3e
-    for (int i : lv2) {
-        cout << i << " ";
-    }
-    cout << endl;
+	// drill 3a
+	vector<int> lv(v.size());
+	// drill 3b
+	for (int i = 0; i < v.size(); i++) {
+		lv[i] = v[i];
+	}
+	// drill 3c
+	for (int i : lv) {
+		cout << i << " ";
+	}
+	cout << endl;
+	// drill 3d
+	vector<int> lv2 = v;
+	// drill 3e
+	for (int i : lv2) {
+		cout << i << " ";
+	}
+	cout << endl;
 }
-
 
 int main() {
-    // drill 4
-    f(gv);
-    return 0;
+	// drill 4
+	f(gv);
+	return 0;
 }
-
