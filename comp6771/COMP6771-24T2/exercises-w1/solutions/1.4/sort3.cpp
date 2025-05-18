@@ -2,7 +2,7 @@
 
 #include <utility>
 
-auto sort3(int &a, int &b, int &c) -> void {
+auto sort3(int& a, int& b, int& c) -> void {
 	if (a > c) {
 		std::swap(a, c);
 	}
@@ -16,7 +16,7 @@ auto sort3(int &a, int &b, int &c) -> void {
 	}
 }
 
-auto sort3(std::string &a, std::string &b, std::string &c) -> void {
+auto sort3(std::string& a, std::string& b, std::string& c) -> void {
 	if (a > c) {
 		std::swap(a, c);
 	}
