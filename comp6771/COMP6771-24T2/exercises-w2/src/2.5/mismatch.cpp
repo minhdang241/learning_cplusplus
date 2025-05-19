@@ -5,16 +5,11 @@
 
 auto mismatch(std::vector<int>& v1, std::vector<int>& v2) -> std::pair<iter, iter>
 {
-    auto it1 = v1.begin();
-    auto it2 = v2.begin();
-
-    while (it1 != v1.end() && it2 != v2.end()) {
-        if (*it1 != *it2) {
-            return std::make_pair(it1, it2);
-        }
-        ++it1;
-        ++it2;
+    auto iter1 = v1.begin();
+    auto iter2 = v2.begin();
+    while (iter1 != v1.end() and iter2 != v2.end() and *iter1 == *iter2) {
+        ++iter1;
+        ++iter2;
     }
-
-    return std::make_pair(v1.begin(), v2.begin());
+    return std::make_pair(iter1, iter2);
 }

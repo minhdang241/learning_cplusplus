@@ -25,6 +25,28 @@ TEST_CASE("Right range is empty")
     CHECK(iter2 == v2.end());
 }
 
-TEST_CASE("ADD MORE TESTS HERE")
+TEST_CASE("No mismatch")
 {
+    auto v1 = std::vector<int> {1, 2, 3};
+    auto v2 = std::vector<int> {1, 2, 3};
+    auto const& [iter1, iter2] = mismatch(v1, v2);
+    CHECK(iter1 == v1.end());
+    CHECK(iter2 == v2.end());
+}
+
+TEST_CASE("Single mismatch")
+{
+    auto v1 = std::vector<int> {1, 4, 3};
+    auto v2 = std::vector<int> {1, 2, 3};
+    auto const& [iter1, iter2] = mismatch(v1, v2);
+    CHECK(*iter1 == 4);
+    CHECK(*iter2 == 2);
+}
+TEST_CASE("Multiple mismatches")
+{
+    auto v1 = std::vector<int> {1, 4, 5};
+    auto v2 = std::vector<int> {1, 2, 3};
+    auto const& [iter1, iter2] = mismatch(v1, v2);
+    CHECK(*iter1 == 4);
+    CHECK(*iter2 == 2);
 }

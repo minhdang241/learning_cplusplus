@@ -1,0 +1,7 @@
+1) C multiple definition
+
+2) B Macro is handled by the preprocessor not the compiler
+
+3) B
+
+4) B

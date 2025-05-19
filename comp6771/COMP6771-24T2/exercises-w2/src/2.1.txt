@@ -1,0 +1,14 @@
+1) A
+Declaration since it does not contain the function body.
+
+2) D Both
+Definition since it declares and intializes the variable.
+
+3) D Both
+
+4) C Neither
+
+5) D Both
+
+
+

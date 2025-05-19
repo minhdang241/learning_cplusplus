@@ -30,3 +30,19 @@ TEST_CASE("Non-empty vector scales") {
 
     CHECK(scaled == expected);
 }
+
+TEST_CASE("Factor 1") {
+    auto factor = 1;
+    auto vec = std::vector<int>{1,2,3,4};
+    auto const expected = std::vector<double>{1,2,3,4};
+    auto scaled = scale(vec, factor);
+    CHECK(scaled == expected);
+}
+
+TEST_CASE("Factor 0") {
+    auto factor = 0;
+    auto vec = std::vector<int>{1,2,3,4};
+    auto const expected = std::vector<double>{0,0,0,0};
+    auto scaled = scale(vec, factor);
+    CHECK(scaled == expected);
+}

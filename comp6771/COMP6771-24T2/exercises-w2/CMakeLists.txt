@@ -60,6 +60,10 @@ link_libraries(catch2_main)
 # -------------- DO NOT MODIFY ABOVE THIS LINE --------------- #
 # ------------------------------------------------------------ #
 
+
+#misc 
+add_executable(misc src/misc.cpp)
+
 # 2.4
 
 add_library(scale src/2.4/scale.cpp)

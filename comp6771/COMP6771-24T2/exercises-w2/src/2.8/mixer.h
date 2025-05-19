@@ -6,8 +6,14 @@
 #include <vector>
 
 // all enum members should be in SCREAM_CASE
-enum paint {
-    IMPLEMENT_THIS_AS_ENUM_CLASS
+enum paint: unsigned char {
+    RED,
+    GREEN,
+    BLUE,
+    YELLOW,
+    CYAN,
+    MAGENTA,
+    BROWN
 };
 
 using mixer_fn = std::optional<paint>(paint, paint);

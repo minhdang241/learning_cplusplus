@@ -1,5 +1,6 @@
 #include "scale.h"
 #include <vector>
+#include <iostream>
 
 auto scale(const std::vector<int>& ivec, double factor) -> std::vector<double>
 {   
